@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chethan Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/5e3ccb074c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <!--<img src="images/logo.png" class="logo">-->
+        <div class="hamburger-lines">
+					<div class="line line1"></div>
+					<div class="line line2"></div>
+					<div class="line line3"></div>
+				</div>
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+         <!-- <li><a href="#portfolio">Portfolio</a></li>-->
+          <li><a href="#contact">Contact</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+      <div class="header-text">
+        
+        <h1>Hi, I'm <span>Chethan V</span><br> From India</h1>
+      </div>
+    </div>
+  </div>
+  <!--About-->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/chethupro.jpg">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>To be part of an organization that provides me an opportunityto learn and grow, where my strengths are utilized towards achievements of organizational goal.</p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>*</span>JAVA</li>
+              <li><span>*</span>HTML-CSS</li>
+              <li><span>*</span>Javascript</li>
+              <li><span>*</span>Mysql</li>
+              <li><span>*</span>Git</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              
+              <li><span>2022</span><br>Java full Stack Training At Kodnest Bangalore</li>
+              
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2019 - 2022</span><br>BE in CS- Government Engineering College Kushalnagr</li>
+              <li><span>2016 - 2029</span><br>Diploma At Cuavery Polytecnic Gonikoppal</li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--services-->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-pen-to-square"></i>
+          <h2>Web Design</h2>
+          <p>Design and simplicity are at the core of our website builder. Easily create, customize, and promote a stunning website that's search engine ready all on your own with the power of Mailchimp’s platform.</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-crop-simple"></i>
+          <h2>UI/UX Design</h2>
+          <p>In this hands-on UI/UX Design Masters Program, you will cover comprehensive approaches to all UI/UX design development stages. You will learn the concepts of UX research, design thinking, UI prototyping and styling, information architecture, usability and testing.</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>Softtware Developer</h2>
+          <p>Have the skills and mind set to be a software developer</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--contact-->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p><i class="fa-solid fa-paper-plane"></i>chethuvirashaiva98@gmail.com</p>
+        <p><i class="fa-solid fa-square-phone"></i>+91-9742727289</p>
+        <div class="social-icons">
+          <a href="https://facebook.com/chethanvirashaiva/"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://github.com/ChethanV-98/"><i class="fa-brands fa-github-square"></i></a>
+          <a href="https://instagram.com/chethanvirashaiva/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://linkedin.com/in/chethan-v-10-nov1998"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <a href="images/chethanRes (1).pdf" download class="btn btn2">Download CV</a>
+      </div>
+      <div class="contact-right">
+        <form>
+          <input type="text" name="Name" placeholder="your Name" required>
+          <input type="email" name="Email" placeholder="your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn2">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>Copyright @ Chethan V. Made With <i class="fa-sharp fa-solid fa-heart"></i> By PaceWisdom</p>
+  </div>
+</div>
+
+
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+  </script>
+
+  <script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+      sidemenu.style.right = "0";
+    }
+    function closemenu(){
+      sidemenu.style.right = "-200px";
+    }
+
+  </script>
+</body>
+</html>
